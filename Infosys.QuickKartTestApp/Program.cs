@@ -11,6 +11,9 @@ namespace Infosys.QuickKartTestApp
     {
         static void Main(string[] args)
         {
+
+            //To make sure program doesn't auto end
+            Console.WriteLine("Press Enter to exit");
             Console.ReadLine();
         }
     }
