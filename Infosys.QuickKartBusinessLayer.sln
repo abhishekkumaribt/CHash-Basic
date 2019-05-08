@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.QuickKartTestApp", "Infosys.QuickKartTestApp\Infosys.QuickKartTestApp.csproj", "{DBA34EFB-5EC5-48DA-8DE0-A8C1348FB12D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infosys.QuickKartBusinessLayer", "Infosys.QuickKartBusinessLayer\Infosys.QuickKartBusinessLayer.csproj", "{644CF34F-208E-4A4D-88BD-EA87521732B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.QuickKartBusinessLayer.Test", "Infosys.QuickKartBusinessLayer.Test\Infosys.QuickKartBusinessLayer.Test.csproj", "{D6FE2986-CD09-42CB-B292-417D3C2F8BFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBA34EFB-5EC5-48DA-8DE0-A8C1348FB12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA34EFB-5EC5-48DA-8DE0-A8C1348FB12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA34EFB-5EC5-48DA-8DE0-A8C1348FB12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA34EFB-5EC5-48DA-8DE0-A8C1348FB12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644CF34F-208E-4A4D-88BD-EA87521732B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644CF34F-208E-4A4D-88BD-EA87521732B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644CF34F-208E-4A4D-88BD-EA87521732B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644CF34F-208E-4A4D-88BD-EA87521732B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FE2986-CD09-42CB-B292-417D3C2F8BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FE2986-CD09-42CB-B292-417D3C2F8BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FE2986-CD09-42CB-B292-417D3C2F8BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FE2986-CD09-42CB-B292-417D3C2F8BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1198902-3E7A-4993-BC2F-0C6C9CE881EA}
+	EndGlobalSection
+EndGlobal
