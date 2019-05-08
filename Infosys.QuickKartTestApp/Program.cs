@@ -11,9 +11,6 @@ namespace Infosys.QuickKartTestApp
     {
         static void Main(string[] args)
         {
-            Category cat = new Category(101, "te45st");
-            Console.WriteLine(cat.CategoryId);
-            Console.WriteLine(cat.CategoryName);
             Console.ReadLine();
         }
     }
