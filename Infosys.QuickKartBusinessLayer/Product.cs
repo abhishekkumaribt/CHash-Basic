@@ -7,12 +7,14 @@ namespace Infosys.QuickKartBusinessLayer
 {
     public class Product
     {
+        private Category category;
         private string description;
         private double price;
         private string productId;
         private string productName;
         private int quantityAvailable;
         public static int currentProductId;
+        public Category Category { get { return category; } set { category = value; } }
         public string Description { get { return description; } set { description = value; } }
         public double Price { get { return price; } set { if (value>0) { price = value; } } }
         public string ProductId { get { return productId; } }
@@ -27,11 +29,12 @@ namespace Infosys.QuickKartBusinessLayer
             productId = "P" + currentProductId.ToString();
             currentProductId += 1;
         }
-        public Product(string productName,string description,double price):this()
+        public Product(string productName,string description,double price,Category category):this()
         {
             Description = description;
             Price = price;
             ProductName = productName;
+            Category = category;
         }
         public Product(string productName, string description, int quantityAvailable):this()
         {

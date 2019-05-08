@@ -6,12 +6,14 @@ namespace Infosys.QuickKartBusinessLayer
 {
     public class Purchase
     {
+        private Customer customer;
         private DateTime dateOfPurchase;
         private string paymentType;
         private string purchaseId;
         private int quantityOrdered;
         private string shippingAddress;
         public static int purchaseCounter;
+        public Customer Customer { get { return customer; } set { customer = value; } }
         public DateTime DateOfPurchase { get { return dateOfPurchase; } set { dateOfPurchase = value; } }
         public string PaymentType { get { return paymentType; } set { paymentType = value; } }
         public string PurchaseId { get { return purchaseId; } }
@@ -33,18 +35,29 @@ namespace Infosys.QuickKartBusinessLayer
             QuantityOrdered = quantityOrdered;
             ShippingAddress = shippingAddress;
         }
-        public double CalculateBillAmount(double price)
+        public double CalculateBillAmount(params Product[] products)
         {
-            double amount;
-            amount = QuantityOrdered * price;
-            return amount;
+            double totalPrice = 0;
+            foreach(Product p in products)
+            {
+                totalPrice += p.Price * QuantityOrdered;
+            }
+            double serviceTax = totalPrice * 0.07;
+            double discountPercentage = CalculateDiscount();
+            totalPrice = (totalPrice + serviceTax) * (1 - discountPercentage);
+            return totalPrice;
         }
-        public double CalculateBillAmount(double price,double discountPercentage)
+        public double CalculateBillAmount(Product product, int quantityRequired)
         {
-            double discountPrice;
-            double totalPrice = CalculateBillAmount(price);
-            discountPrice = totalPrice - (totalPrice * discountPercentage / 100);
-            return discountPrice;
+            double totalPrice = product.Price * quantityRequired;
+            double serviceTax = totalPrice * 0.07;
+            double discountPercentage = CalculateDiscount();
+            totalPrice = (totalPrice + serviceTax) * (1 - discountPercentage);
+            return totalPrice;
+        }
+        public double CalculateDiscount()
+        {
+            return 0.05;
         }
         static double RoundOffBill(double amount)
         {

@@ -11,7 +11,7 @@ namespace Infosys.QuickKartBusinessLayer
         public static int sellerIdCount;
         public string SellerId { get { return sellerId; } }
         public string SellerName { get { return sellerName; } set { Validator validate = new Validator(); if(validate.IsName(value)&&validate.HasLength(value,5,20)) sellerName = value; } }
-        public string[] SellerLocation { get; set; }
+        public string[] SellerLocations { get; set; }
         static Seller()
         {
             sellerIdCount = 1001;
@@ -24,6 +24,33 @@ namespace Infosys.QuickKartBusinessLayer
         public Seller(string sellerName):this()
         {
             SellerName = sellerName;
+        }
+        public Seller(int maxSize)
+        {
+            SellerLocations = new string[maxSize];
+        }
+        public bool AddLocations(params string[] sellerLocations)
+        {
+            int items = 0;
+            for(int i=0;i< SellerLocations.Length;i++)
+            {
+                if (SellerLocations[i] == null)
+                    break;
+                items++;
+            }
+            if (SellerLocations.Length - items >= sellerLocations.Length)
+            {
+                foreach(string s in sellerLocations)
+                {
+                    SellerLocations[items] = s;
+                    items++;
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
