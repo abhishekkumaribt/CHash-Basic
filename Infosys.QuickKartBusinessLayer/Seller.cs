@@ -16,7 +16,7 @@ namespace Infosys.QuickKartBusinessLayer
         {
             sellerIdCount = 1001;
         }
-        private Seller()
+        public Seller()
         {
             sellerId = "S" + sellerIdCount.ToString();
             sellerIdCount += 1;

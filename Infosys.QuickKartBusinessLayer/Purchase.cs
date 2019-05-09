@@ -23,7 +23,7 @@ namespace Infosys.QuickKartBusinessLayer
         {
             purchaseCounter = 1001;
         }
-        private Purchase()
+        public Purchase()
         {
             purchaseId = "B" + purchaseCounter.ToString();
             purchaseCounter += 1;

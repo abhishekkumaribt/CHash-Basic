@@ -6,8 +6,8 @@ namespace Infosys.QuickKartBusinessLayer
 {
     class LabTestRepository
     {
-        private double[] labTestCharge;
-        private string[] labTestId;
+        private static double[] labTestCharge;
+        private static string[] labTestId;
         public LabTestRepository()
         {
             labTestId = new string[] { "L1", "L2", "L3", "L4" };

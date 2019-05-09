@@ -10,6 +10,12 @@ namespace Infosys.QuickKartBusinessLayer
         Female,
         Others
     }
+    public enum CustomerCardType
+    {
+        Silver,
+        Gold,
+        Platinum
+    }
     public class Customer
     {
         private string address;
@@ -33,12 +39,12 @@ namespace Infosys.QuickKartBusinessLayer
         {
             currentValueForCustomerId = 1000;
         }
-        private Customer()
+        public Customer()
         {
             customerId = currentValueForCustomerId;
             currentValueForCustomerId += 1;
         }
-        public Customer(string customerName, string address,DateTime dateOfBirth,string emailId,Gender gender,string password,string customerType):this()
+        public Customer(string customerName, string address,DateTime dateOfBirth,string emailId,Gender gender,string password):this()
         {
             CustomerName = customerName;
             Address = address;
@@ -46,7 +52,6 @@ namespace Infosys.QuickKartBusinessLayer
             EmailId = emailId;
             Gender = gender;
             Password = password;
-            CustomerType = customerType;
         }
         public double GetDiscount()
         {

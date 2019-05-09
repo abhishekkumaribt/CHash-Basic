@@ -92,7 +92,7 @@ namespace Infosys.QuickKartBusinessLayer
         {
             nextEmployeeNumber = 1001;
         }
-        private Employee()
+        public Employee()
         {
             EmployeeId = nextEmployeeNumber;
             nextEmployeeNumber += 1;

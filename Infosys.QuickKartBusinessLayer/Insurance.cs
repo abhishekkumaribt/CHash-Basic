@@ -16,7 +16,7 @@ namespace Infosys.QuickKartBusinessLayer
         {
             counter = 1000;
         }
-        private Insurance()
+        public Insurance()
         {
             age = 18;
             creditHistory = 45000;

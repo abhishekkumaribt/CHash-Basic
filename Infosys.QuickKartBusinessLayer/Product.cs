@@ -24,7 +24,7 @@ namespace Infosys.QuickKartBusinessLayer
         {
             currentProductId = 100;
         }
-        private Product()
+        public Product()
         {
             productId = "P" + currentProductId.ToString();
             currentProductId += 1;
