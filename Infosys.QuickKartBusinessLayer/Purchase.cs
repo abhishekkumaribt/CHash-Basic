@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Infosys.QuickKartBusinessLayer
 {
-    public class Purchase
+    public class Purchase:ITax
     {
         private Customer customer;
         private DateTime dateOfPurchase;
@@ -74,6 +74,27 @@ namespace Infosys.QuickKartBusinessLayer
             if (totalPurchase > 0)
                 percnt = (purchaseOnSameDate / totalPurchase) * 100;
             return percnt;
+        }
+
+        public double PayTax(double price)
+        {
+            double tax = price * QuantityOrdered;
+            switch (PaymentType)
+            {
+                case "Debit Card":
+                    tax *= 1.02;
+                    break;
+                case "Credit Card":
+                    tax *= 1.03;
+                    break;
+                case "Cash":
+                    tax *= 1.01;
+                    break;
+                default:
+                    tax *= 1.04;
+                    break;
+            }
+            return tax;
         }
     }
 }

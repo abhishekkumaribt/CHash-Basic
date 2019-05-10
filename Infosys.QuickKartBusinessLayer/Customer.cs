@@ -72,5 +72,13 @@ namespace Infosys.QuickKartBusinessLayer
             Console.WriteLine("Calculation completed successfully");
             return age;
         }
+        public virtual double CalculateDiscount()
+        {
+            if (currentValueForCustomerId >= 1399)
+            {
+                return 4;
+            }
+            return 0;
+        }
     }
 }

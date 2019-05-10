@@ -12,5 +12,21 @@ namespace Infosys.QuickKartBusinessLayer
         {
             CardType = cardType;
         }
+        public override double CalculateDiscount()
+        {
+            double discount = 0;
+            if (CardType == CustomerCardType.Silver)
+            {
+                discount = 3;
+            }
+            else if (cardType == CustomerCardType.Gold){
+                discount = 5;
+            }
+            else if (cardType == CustomerCardType.Platinum)
+            {
+                discount = 7;
+            }
+            return discount;
+        }
     }
 }

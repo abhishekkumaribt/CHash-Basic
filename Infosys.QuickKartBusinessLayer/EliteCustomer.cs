@@ -12,5 +12,12 @@ namespace Infosys.QuickKartBusinessLayer
         {
             OwnedCoupons = ownedCoupons;
         }
+        public override double CalculateDiscount()
+        {
+            double discount;
+            discount = OwnedCoupons * 10;
+            OwnedCoupons = 10;
+            return discount;
+        }
     }
 }
